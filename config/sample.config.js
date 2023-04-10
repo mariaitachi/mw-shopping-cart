@@ -3,10 +3,10 @@ module.exports = {
       port: 3000,
     },
     db: {
-      host: 'localhost',
-      user: 'root',
-      password: 'root',
-      database: 'shoppingcart',
+      host: '',
+      user: '',
+      password: '',
+      database: '',
       dialect: 'mysql',
       pool: {
         max: 5,
