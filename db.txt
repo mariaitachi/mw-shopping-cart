@@ -1,0 +1,40 @@
+create database shoppingcart;
+create table products (
+	product_id varchar(255) not null,
+    title varchar(255) not null,
+    description varchar(255) not null,
+    price double not null,
+	created_at  datetime not null DEFAULT (CURRENT_TIMESTAMP),
+	updated_at datetime not null ON UPDATE CURRENT_TIMESTAMP,
+    PRIMARY KEY (product_id)
+);
+
+create table inventory(
+	id int not null auto_increment,
+    product_id varchar(255) not null,
+    count int,
+	created_at  datetime not null DEFAULT (CURRENT_TIMESTAMP),
+	updated_at datetime not null ON UPDATE CURRENT_TIMESTAMP,
+    primary key (id),
+    foreign key (product_id) references products(product_id)
+);
+
+create table coupons(
+	id int not null auto_increment,
+    code varchar(255) not null,
+    discountPrice float not null,
+	created_at  datetime not null DEFAULT (CURRENT_TIMESTAMP),
+	updated_at datetime not null ON UPDATE CURRENT_TIMESTAMP,
+    primary key (id)
+);
+
+create table product_orders(
+	id int not null auto_increment,
+    order_id varchar(255) not null,
+    product_id varchar(255) not null,
+    count int default 1,
+	created_at  datetime not null DEFAULT (CURRENT_TIMESTAMP),
+	updated_at datetime not null ON UPDATE CURRENT_TIMESTAMP,
+    primary key (id),
+    foreign key (product_id) references products(product_id)
+);

@@ -31,4 +31,7 @@ Start the service
 npm run dev:start
 ```
 
+### db create query
+Create MySQL database and tables by using query in db.txt
+
 ## Thank You..!
