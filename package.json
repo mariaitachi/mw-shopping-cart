@@ -1,0 +1,20 @@
+{
+  "name": "shopping-cart",
+  "version": "1.0.0",
+  "description": "\"shopping cart\"",
+  "main": "app.js",
+  "scripts": {
+    "dev:start": "nodemon app.js"
+  },
+  "author": "itachimaria",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
+    "lodash": "^4.17.21",
+    "mysql2": "^3.2.0",
+    "nodemon": "^2.0.22",
+    "sequelize": "^6.30.0",
+    "uuid4": "^2.0.3"
+  }
+}
