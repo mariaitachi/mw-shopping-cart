@@ -1,7 +1,7 @@
 # mw-shopping-cart
 Service
 ```
-Node v18.14.1
+Node v18.12.1
 ```
 ## Clone and start the service
 ### Step 1
